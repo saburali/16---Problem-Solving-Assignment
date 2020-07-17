@@ -43,25 +43,25 @@ function brickCalculator(floor){
     if(floor > 0 && floor < 11){
         var feetCalculation = 15*1000 ;
         var totalBricks = floor * feetCalculation ;
-        return "Total "+totalBricks + " bricks";
+        return "Total " +totalBricks + " bricks, for " + floor + " floors";
     }
     else if(floor > 10 && floor <21){
         var secondCondition = 150000;
         var feetCalculation = 12*1000 ;
         var nthFloor = floor - 10 ;
         var totalBricks = (nthFloor * feetCalculation) + secondCondition;
-        return "Total "+totalBricks + " bricks";
+        return "Total " +totalBricks + " bricks, for " + floor + " floors";
     }
     else if(floor >= 21){
         var thirdCondition = 270000;
         var feetCalculation = 10*1000 ;
         var nthFloor = floor - 20 ;
         var totalBricks = (nthFloor * feetCalculation) + thirdCondition;
-        return "Total " +totalBricks + " bricks";
+        return "Total " +totalBricks + " bricks, for " + floor + " floors";
     }
     else{
         return "number of floor is invalid" 
     }
 }
-let brickResult = brickCalculator(42); // Number of floors
+let brickResult = brickCalculator(4); // Number of floors
 console.log(brickResult);
