@@ -37,7 +37,6 @@ let woodResult = woodCalculator(16, 8, 4); // Chair, Table, Bed
 console.log(woodResult);
 
 
-
 // 3) Brick Calculator
 function brickCalculator(floor){
     if(floor > 0 && floor < 11){
@@ -63,5 +62,21 @@ function brickCalculator(floor){
         return "number of floor is invalid" 
     }
 }
-let brickResult = brickCalculator(4); // Number of floors
+let brickResult = brickCalculator(27); // Number of floors
 console.log(brickResult);
+
+
+// 4) Find tinyFriend
+function tinyFriend(arry) {
+    return arry.reduce(function (prevWord, currWord) {
+        if (currWord.length < prevWord.length) {
+            return currWord;
+        } 
+        else {
+            return prevWord;
+        }
+    })
+}
+let friends = ["jisan", "jerry", "salman", "mimi", "riya"]; // Add Name
+let tinyResult = tinyFriend(friends);
+console.log("Tiny Friends:", tinyResult);
