@@ -35,3 +35,33 @@ function woodCalculator(chair , table , bed){
 }
 let woodResult = woodCalculator(16, 8, 4); // Chair, Table, Bed
 console.log(woodResult);
+
+
+
+// 3) Brick Calculator
+function brickCalculator(floor){
+    if(floor > 0 && floor < 11){
+        var feetCalculation = 15*1000 ;
+        var totalBricks = floor * feetCalculation ;
+        return "Total "+totalBricks + " bricks";
+    }
+    else if(floor > 10 && floor <21){
+        var secondCondition = 150000;
+        var feetCalculation = 12*1000 ;
+        var nthFloor = floor - 10 ;
+        var totalBricks = (nthFloor * feetCalculation) + secondCondition;
+        return "Total "+totalBricks + " bricks";
+    }
+    else if(floor >= 21){
+        var thirdCondition = 270000;
+        var feetCalculation = 10*1000 ;
+        var nthFloor = floor - 20 ;
+        var totalBricks = (nthFloor * feetCalculation) + thirdCondition;
+        return "Total " +totalBricks + " bricks";
+    }
+    else{
+        return "number of floor is invalid" 
+    }
+}
+let brickResult = brickCalculator(42); // Number of floors
+console.log(brickResult);
